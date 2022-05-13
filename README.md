@@ -190,7 +190,7 @@ Encrypt your values if not on VPS
 }
 ```
 
-### `GENERAL INTERFACE STATUS CODES`
+### GENERAL INTERFACE STATUS CODES
 |     Code    |            |     Description                                                                                                                                                             |
 |-------------|------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |     1       |     100    |     The request process failed with   general authorization rule or     The request was not succeed   because a required parameter was missing or not properly formatted    |
