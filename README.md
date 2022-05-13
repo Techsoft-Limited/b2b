@@ -1,17 +1,17 @@
 # B2B
 A B2B API interface allows regulated third party financial institutions to transact within KAKAUPAY platform, the API can transfer funds from institution collection wallet account to authorized KAKUPAY existing account.
 
-###HTTP REQUIREMENTS
+### HTTP REQUIREMENTS
 The interface exchange AES-256-CBC encrypted data through SSL with third parties in POST request.
 
 This means we provide an end-to-end encryption when transferring data through HTTP protocol.
 
-Note: When connecting via VPS servers, It is possible to skip the encryption part. to do that consult us development team.
+**Note:** When connecting via VPS servers, It is possible to skip the encryption part. to do that consult us development team.
 
 ## Forming Http request
 These headers are part of every request of the API to form basic authorization of resources and identification of institution
 
-**Base_Url** The remote universal indicate hosting the service	To be provided
+**BaseURL** The remote universal indicate hosting the service	To be provided
 
 | #  | Parameter | Description	  | Value
 |---|---|---|---|
@@ -45,9 +45,9 @@ These headers are part of every request of the API to form basic authorization o
 2. Encrypt your payload values using open_ssl algorithm through the decrypted key
 3. Use the encrypted key as authorization bearer
 
-##Let get into your first payment
+## Let get into your first payment
 
-##Disbursement
+### Disbursement
 Use “disbursement” to request funds transfer from collection wallet to KAKAPAY active account
 
 _Endpoint:_ /v1/disbursement
@@ -81,10 +81,9 @@ Encrypt your values if not on VPS
     }
 }
 ```
+## Checking payment status
 
-##Checking payment status
-
-##status
+## status
 Use “status” to request transaction transfer status; This API is useful in a time when an organization needs to know the status of transaction which it recent send us. A transaction can either be _pending, paid, reversed, or failed_
 
 _Endpoint:_ /v1/status
@@ -120,9 +119,9 @@ Encrypt your values if not on VPS
 ```
 
 
-##Retry failed transactions
+## Retry failed transactions
 
-##retry
+## retry
 Use “retry” to request a failed transaction to be retried
 
 _Endpoint:_ /v1/retry
@@ -158,9 +157,9 @@ Encrypt your values if not on VPS
 ```
 
 
-##Checking if provided specimen is an account number on kakupay
+## Checking if provided specimen is an account number on kakupay
 
-##isAccount
+## isAccount
 Use “IsAccount” to request if the claimed recipient is valid account or in a state to receive payment on KAKUPAY platform
 
 _Endpoint:_ /v1/isAccount
@@ -191,7 +190,7 @@ Encrypt your values if not on VPS
 }
 ```
 
-###`GENERAL INTERFACE STATUS CODES`
+### `GENERAL INTERFACE STATUS CODES`
 |     Code    |            |     Description                                                                                                                                                             |
 |-------------|------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |     1       |     100    |     The request process failed with   general authorization rule or     The request was not succeed   because a required parameter was missing or not properly formatted    |
@@ -204,5 +203,5 @@ Encrypt your values if not on VPS
 |     8       |     204    |     Transaction recipient is not 4 or 10 digits long                                                                                                                        |
 |     9       |     205    |     The merchant account balance is   low – The institution wallet has no balance therefore needs to top-up                                                                 |
 |    10       |     500    |     The request process failed because the requested transaction   was not found or the status might have been locked.                                                      |
-|    11       |     501    |     Maximum retry period or count exceeded   - Transaction is LOCKED and can no longer processed.                                                                           |
+|    11       |     501    |     Maximum retry period or count exceeded   - Transaction is LOCKED and can no longer be processed.                                                                           |
 |    12       |     404    |     You do not have privilege to access the requested   resource. Consult the documentation on how to send such a request                                                   |
