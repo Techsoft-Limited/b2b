@@ -89,7 +89,7 @@ Use “status” to request transaction status; This API is useful when an organ
 
 _Endpoint:_ /v1/status
 ### Sample http code
-Encrypt your values if not on VPS
+Encrypt values if not on VPS
 ``` json
 {
     "reference": ""
@@ -127,7 +127,7 @@ Use “retry” to request a failed transaction to be retried
 
 _Endpoint:_ /v1/retry
 ### Sample http code
-Encrypt your values if not on VPS
+Encrypt values if not on VPS
 ``` json
 {
     "reference": ""
@@ -165,7 +165,7 @@ Use “IsAccount” to request if the claimed recipient is valid account or in a
 
 _Endpoint:_ /v1/isAccount
 ### Sample http code
-Encrypt your values if not on VPS
+Encrypt values if not on VPS
 ``` json
 {
     "recipient": ""
