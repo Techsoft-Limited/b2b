@@ -16,6 +16,7 @@
 
     $config = [
         'amount'        => 1000,
+        'fromAccount'   => '',
         'recipient'     => '',
         'reference'     => 'B2B-'.time(),
         'description'   => ''

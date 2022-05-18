@@ -6,7 +6,7 @@ The interface exchange AES-256-CBC encrypted data through SSL with third parties
 
 This means we provide an end-to-end encryption when transferring data through HTTP protocol.
 
-**Note:** When connecting via VPS servers, It is possible to skip the encryption part. to do that consult us development team.
+**Note:** When connecting via VPS servers, It is possible to skip the encryption part. to do that consult our development team.
 
 ## Forming Http request
 These headers are part of every request of the API to form basic authorization of resources and identification of institution
@@ -45,7 +45,7 @@ These headers are part of every request of the API to form basic authorization o
 2. Encrypt your payload values using open_ssl algorithm through the decrypted key
 3. Use the encrypted key as authorization bearer
 
-## Let get into your first payment
+## Let's get into your first payment
 
 ### Disbursement
 Use “disbursement” to request funds transfer from collection wallet to KAKAPAY active account
@@ -56,6 +56,7 @@ Encrypt your values if not on VPS
 ``` json
 {
     "amount": "",
+    "fromAccount": "",
     "recipient": "",
     "reference": "",
     "description": ""
@@ -84,7 +85,7 @@ Encrypt your values if not on VPS
 ## Checking payment status
 
 ## status
-Use “status” to request transaction transfer status; This API is useful in a time when an organization needs to know the status of transaction which it recent send us. A transaction can either be _pending, paid, reversed, or failed_
+Use “status” to request transaction status; This API is useful when an organization wants to query status of transaction which was recently sent to us. A transaction can either be _pending, paid, reversed, or failed_
 
 _Endpoint:_ /v1/status
 ### Sample http code
