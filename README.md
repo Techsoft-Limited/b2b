@@ -6,7 +6,7 @@ The interface exchange AES-256-CBC encrypted data through SSL with third parties
 
 This means we provide an end-to-end encryption when transferring data through HTTP protocol.
 
-**Note:** When connecting via VPS servers, It is possible to skip the encryption part. to do that consult our development team.
+**Note:** When connecting via VPN servers, It is possible to skip the encryption part. to do that consult our development team.
 
 ## Forming Http request
 These headers are part of every request of the API to form basic authorization of resources and identification of institution
@@ -51,8 +51,8 @@ These headers are part of every request of the API to form basic authorization o
 Use “disbursement” to request funds transfer from collection wallet to KAKAPAY active account
 
 _Endpoint:_ /v1/disbursement
-### Sample http code
-Encrypt your values if not on VPS
+### Sample body
+Encrypt your values if not on VPN
 ``` json
 {
     "amount": "",
@@ -88,8 +88,8 @@ Encrypt your values if not on VPS
 Use “status” to request transaction status; This API is useful when an organization wants to query status of transaction which was recently sent to us. A transaction can either be _pending, paid, reversed, or failed_
 
 _Endpoint:_ /v1/status
-### Sample http code
-Encrypt values if not on VPS
+### Sample body
+Encrypt values if not on VPN
 ``` json
 {
     "reference": ""
@@ -126,8 +126,8 @@ Encrypt values if not on VPS
 Use “retry” to request a failed transaction to be retried
 
 _Endpoint:_ /v1/retry
-### Sample http code
-Encrypt values if not on VPS
+### Sample body
+Encrypt values if not on VPN
 ``` json
 {
     "reference": ""
@@ -164,8 +164,8 @@ Encrypt values if not on VPS
 Use “IsAccount” to request if the claimed recipient is valid account or in a state to receive payment on KAKUPAY platform
 
 _Endpoint:_ /v1/isAccount
-### Sample http code
-Encrypt values if not on VPS
+### Sample body
+Encrypt values if not on VPN
 ``` json
 {
     "recipient": ""
